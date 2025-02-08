@@ -1,0 +1,18 @@
+services:
+  nginx_server:
+    image: alinarizh/my_nginx:latest
+    ports:
+      - 80:80
+    restart: always
+    networks:
+      - rizhnetwork
+
+
+  web:
+    image: alinarizh/my_web:latest
+    restart: always
+    networks:
+      - rizhnetwork
+
+networks:
+  rizhnetwork:
